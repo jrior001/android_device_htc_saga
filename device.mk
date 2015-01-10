@@ -37,9 +37,9 @@ PRODUCT_COPY_FILES += \
 	$(COMMON_PATH)/recovery/sbin/offmode_charging:recovery/root/sbin/offmode_charging \
 	$(COMMON_PATH)/recovery/sbin/power_test:recovery/root/sbin/power_test \
 	$(COMMON_PATH)/recovery/twrp.fstab:recovery/root/etc/twrp.fstab \
-	$(COMMON_PATH)/ramdisk/fstab.saga:root/fstab.saga \
-	$(COMMON_PATH)/ramdisk/init.saga.rc:root/init.saga.rc \
-	$(COMMON_PATH)/ramdisk/ueventd.saga.rc:root/ueventd.saga.rc
+	$(COMMON_PATH)/rootdir/fstab.saga:root/fstab.saga \
+	$(COMMON_PATH)/rootdir/init.saga.rc:root/init.saga.rc \
+	$(COMMON_PATH)/rootdir/ueventd.saga.rc:root/ueventd.saga.rc
 
 # GPS config
 PRODUCT_COPY_FILES += \

@@ -50,7 +50,8 @@ TARGET_KERNEL_CONFIG := saga_cm11_defconfig
 #TARGET_PREBUILT_KERNEL := device/htc/ace/prebuilt/kernel/kernel
 
 TARGET_NO_SEPARATE_RECOVERY := true
-TARGET_RECOVERY_FSTAB := device/htc/saga/ramdisk/fstab.saga
+TARGET_RECOVERY_FSTAB := device/htc/saga/rootdir/fstab.saga
+TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 # Brightness
@@ -82,6 +83,9 @@ BOARD_USE_NEW_LIBRIL_HTC := true
 BUILD_EMULATOR_SENSORS_MODULE := false
 BUILD_EMULATOR_GPS_MODULE := false
 
+# Charge mode
+BOARD_CHARGING_MODE_BOOTING_LPM := /sys/htc_lpm/lpm_mode
+
 # TWRP
 DEVICE_RESOLUTION := 480x800
 TW_FLASH_FROM_STORAGE := true
@@ -89,6 +93,9 @@ TW_INTERNAL_STORAGE_PATH := "/sdcard"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "sdcard"
 TW_INCLUDE_JB_CRYPTO := true
 TW_NO_SCREEN_BLANK := true
-TARGET_RECOVERY_INITRC := device/htc/saga/recovery/init.recovery.qcom.rc
 TW_INCLUDE_DUMLOCK := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
+#RECOVERY_VARIANT := twrp
+TW_NO_CPU_TEMP := true
+TW_NO_USB_STORAGE := true
+
